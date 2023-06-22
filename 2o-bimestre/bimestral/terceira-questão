@@ -1,4 +1,0 @@
-USE mercado;
-
-SELECT DISTINCT categoria
-FROM produtos;
