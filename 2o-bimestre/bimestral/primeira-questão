@@ -1,3 +1,1 @@
-USE mercado;
 
-SELECT AVG(preco) AS preco_medio, MAX(preco) AS preco_maximo, MIN(preco) AS preco_minimo FROM produtos;
