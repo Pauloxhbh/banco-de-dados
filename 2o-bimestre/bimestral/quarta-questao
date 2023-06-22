@@ -1,6 +1,0 @@
-USE mercado;
-
-SELECT categoria, COUNT(*) AS quantidade
-FROM produtos
-GROUP BY categoria
-HAVING COUNT(*) > 2;
