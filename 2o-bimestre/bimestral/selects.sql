@@ -60,15 +60,9 @@ SELECT SUM(preco) AS valor_total
 FROM produtos
 WHERE categoria = 'Eletrônicos';
 
--- Quais são os produtos que possuem um preço máximo dentro de cada categoria?
-
+-- Quais são os produtos que pertencem às categorias "Vestuário" ou "Acessórios" e possuem um preço entre R$ 30 e R$ 50?
 USE mercado;
 
-SELECT p.*
-FROM produtos p
-INNER JOIN (
-    SELECT categoria, MAX(preco) AS preco_maximo
-    FROM produtos
-    GROUP BY categoria
-) sub
-ON p.categoria = sub.categoria AND p.preco = sub.preco_maximo;
+SELECT *
+FROM produtos
+WHERE (categoria = 'Vestuário' OR categoria = 'Acessórios') AND (preco >= 30 AND preco <= 50);
